@@ -694,4 +694,4 @@ https://chatgpt.com/ = für Errors
 
 ## 9. VM
 Unten haben wir unsere VM abgelegt, falls beim Kunden etwas nicht funktioniert kann auf diese zurückgegriffen werden.
-[VM](./VM/Clone of Clone of Clone of Clone of LP-22.04_LTS_Moodle_Final.vmx)
+[VM](./VM/)
