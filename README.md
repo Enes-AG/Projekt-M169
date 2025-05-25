@@ -35,7 +35,7 @@ lauffähig sein.
 |------------------|------------------------|
 | Moodle           | 3.10.11                |
 | PHP              | 7.4 (veraltet)         |
-| Datenbank        | MariaDB                |
+| Datenbank        | MySQL                  |
 | Containerisierung| Noch nicht vorhanden   |
 
 ## 4. Vorgehen
