@@ -94,7 +94,7 @@ Auf die richtige PHP Version achten!
 
 
 
-### 4.4 DB Dump erstellen 
+### 4.5 DB Dump erstellen 
 
 Nun muss ein Datenbank Dump erstellt werden damit die Daten übernommen werden. 
 
@@ -104,6 +104,31 @@ sudo mysqldump -u root -p moodle > dumps/moodle-dump.sql
 ```
 
 ![image](https://github.com/user-attachments/assets/3f2a01ac-6050-481d-9878-82f7699780a7)
+
+
+### 4.6 Moodle-Sourcecode inkl. alle Files kopieren und bearbeiten
+
+```bash
+cp /var/www/html/config.php ~/moodle-docker/wwwroot/
+```
+
+Wurde erfolgreich kopiert.
+
+![image](https://github.com/user-attachments/assets/7f04cd18-4a8c-4c18-8261-4cb136acd228)
+
+Nun muss die config.php Datei angepasst werden.
+
+```bash
+nano ~/moodle-docker/wwwroot/config.php
+```
+![image](https://github.com/user-attachments/assets/3bc6c34c-b85e-46a4-a7aa-3355d275a59b)
+
+
+
+
+
+
+
 
 
 
