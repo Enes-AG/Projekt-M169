@@ -515,9 +515,14 @@ nano Dockerfile
 ![image](https://github.com/user-attachments/assets/d83a5e55-6243-42b4-8d2a-3959ff082c4b)
 
 
+### 6.8 Schauen ob alle Daten korrekt migriert worden
 
+```bash
+ docker-compose logs db | grep -i initdb
 
+```
 
+![image](https://github.com/user-attachments/assets/30d9d3fe-5208-4288-b391-f6c65d8f7321)
 
 
 
