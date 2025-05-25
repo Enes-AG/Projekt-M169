@@ -5,19 +5,50 @@
 
 
 ##  Inhaltsverzeichnis
-1. [Einleitung](#1-einleitung)
-2. [Zielsetzung](#2-zielsetzung)
-3. [Ausgangslage](#3-ausgangslage)
-4. [Vorgehen](#4-vorgehen-altes-moodle-31011-containersieren-mit-db)
-5. [Probleme & Lösungen](#5-probleme--lösungen)
-6. [Ergebnis & Fazit](#6-ergebnis--fazit)
-7. [Screenshots](#7-screenshots)
-8. [Lernjournal](#8-lernjournal)
-   - [Lernjournal_Arin](#81-lernjournal-arin)
-   - [Lernjournal_Till](#82-lernjournal-till)
-   - [Lernjournal_Levin](#83-lernjournal-levin)
-9. [Quellenverzeichnis](#9-quellenverzeichnis)
-10. [Netzwerkplan](#10-netzwerkplan)
+## Inhaltsverzeichnis
+
+1. [Einleitung](#1-einleitung)  
+2. [Zielsetzung](#2-zielsetzung)  
+3. [Ausgangslage](#3-ausgangslage)  
+4. [Vorgehen altes Moodle 3.10.11 Containersieren mit DB](#4-vorgehen-altes-moodle-31011-containersieren-mit-db)  
+   - [4.1 VM starten & Pakete aktualisieren](#41-vm-starten--pakete-und-paketlisten-aktualieren-und-docker-installieren)  
+   - [4.2 Verzeichnis erstellen](#42-verzeichnis-erstellen)  
+   - [4.3 docker-compose.yml erstellen](#43-docker-composeyml-erstellen)  
+   - [4.4 Dockerfile erstellen](#44-dockerfile-erstellen)  
+   - [4.5 DB Dump erstellen](#45-db-dump-erstellen)  
+   - [4.6 Moodle-Sourcecode kopieren und bearbeiten](#46-moodle-sourcecode-inkl-alle-files-kopieren-und-bearbeiten)  
+   - [4.7 Container starten](#47-container-starten-bauen)  
+   - [4.9 Fehler und Anpassung](#49-error)  
+   - [4.9 Prüfung](#49-prüfen-ob-es-geklappt-hat)  
+5. [Lokales Moodle auf Version 4.5.2 upgraden](#5-lokales-moodle-auf-version-452-upgraden)  
+   - [5.1 Backup machen](#51-backup-machen)  
+   - [5.2 Download der Moodle Version 3.11.17](#52-download-der-moodle-version-31117)  
+   - [5.3 Moodle-Dateien ersetzen](#53--moodle-dateien-ersetzen)  
+   - [5.4 config.php zurückkopieren](#54-configphp-zurückkopieren--dateirechte-prüfen)  
+   - [5.5 Upgrade auf 3.11.17](#55-upgrade-ausführen-auf-version-31117)  
+   - [5.6 Upgrade auf Version 4.1](#56-upgrade-auf-version-41)  
+   - [5.7 Upgrade auf Version 4.2.1](#57-upgrade-auf-version-421)  
+   - [5.8 Upgrade auf Version 4.5.4](#58-upgrade-auf-version-454)  
+6. [Migration der neuen Version 4.5.2 in die Container Umgebung](#6-migration-der-neuen-version-452-in-die-container-umgebung)  
+   - [6.1 Verzeichnisstruktur erstellen](#61-verzeichnisstruktur-erstellen)  
+   - [6.2 docker-compose.yml erstellen](#62-docker-composeyml-erstellen)  
+   - [6.3 .env erstellen](#63-env-erstellen)  
+   - [6.4 Moodle-Source klonen](#64-moodle-source-in-master-klonen)  
+   - [6.5 config.php erstellen](#65-configphp-erstellen)  
+   - [6.6 Dockerfile erstellen](#66-dockerfile-erstellen)  
+   - [6.7 Datenbank Dump erstellen](#67-datenbank-dump-erstellen)  
+   - [6.8 Container bauen und hochfahren](#68-container-bauen-und-hochfahren)  
+   - [6.9 Prüfung der Migration](#69-schauen-ob-alle-daten-korrekt-migriert-worden)  
+   - [6.10 Anforderungen überprüfen](#610-anforderungen-überprüfen)  
+   - [6.11 phpMyAdmin](#611-phpmyadmin)  
+7. [Lernjournal](#7-lernjournal)  
+   - [Lernjournal Arin](#71-lernjournal-arin)  
+   - [Lernjournal Till](#72-lernjournal-till)  
+   - [Lernjournal Levin](#73-lernjournal-levin)  
+   - [Reflexion Gruppe](#74-reflexion-gruppe)  
+8. [Quellenverzeichnis](#8-quellenverzeichnis)  
+
+
 
 
 ##  1. Einleitung
@@ -613,8 +644,8 @@ phpMyAdmin ist über Port 8880 erreichbar und zeigt das die gesamte DB korrekt m
 
 
 
-## 8. Lernjournal
-### 8.1 Lernjournal Arin
+## 7. Lernjournal
+### 7.1 Lernjournal Arin
 
 [Lernjournal Nr. 1](./Lernjournal/Lernjournal_1_Arin_Erenler.pdf)
 
@@ -622,7 +653,7 @@ phpMyAdmin ist über Port 8880 erreichbar und zeigt das die gesamte DB korrekt m
 
 [Lernjournal Nr. 3](./Lernjournal/Lernjournal_3_Arin_Erenler.pdf)
 
-### 8.2 Lernjournal Till
+### 7.2 Lernjournal Till
 
 [Lernjournal Nr. 1](./Lernjournal/Lernjournal_1_Till_Schmuki.pdf)
 
@@ -630,7 +661,7 @@ phpMyAdmin ist über Port 8880 erreichbar und zeigt das die gesamte DB korrekt m
 
 [Lernjournal Nr. 3](./Lernjournal/Lernjournal_3_Till_Schmuki.pdf)
 
-### 8.3 Lernjournal Levin
+### 7.3 Lernjournal Levin
 
 [Lernjournal Nr. 1](./Lernjournal/Lernjournal_1_Levin_Schöbi.pdf)
 
@@ -638,11 +669,11 @@ phpMyAdmin ist über Port 8880 erreichbar und zeigt das die gesamte DB korrekt m
 
 [Lernjournal Nr. 3](./Lernjournal/Lernjournal_3_Levin_Schöbi.pdf)
 
-### 8.3 Reflexion Gruppe
+### 7.4 Reflexion Gruppe
 [Reflexion_Gruppe](./Lernjournal/Reflexion_Gruppe.pdf)
 
 
-## 9. Quellenverzeichnis
+## 8. Quellenverzeichnis
 
 https://docs.moodle.org/500/en/Moodle_version
 https://download.moodle.org/releases/latest/
