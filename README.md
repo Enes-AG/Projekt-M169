@@ -525,10 +525,38 @@ nano Dockerfile
 
 ```bash
  docker-compose logs db | grep -i initdb
-
 ```
 
 ![image](https://github.com/user-attachments/assets/30d9d3fe-5208-4288-b391-f6c65d8f7321)
+
+
+```bash
+ sudo mysql -u root -p   -e "SELECT COUNT(*) AS tables_old FROM information_schema.tables \
+      WHERE table_schema='moodle';"
+
+docker-compose exec -T db \
+  mysql -u root -p"${MYSQL_ROOT_PASSWORD}" \
+    -e "SELECT COUNT(*) AS tables_new \
+        FROM information_schema.tables \
+        WHERE table_schema='${MYSQL_DATABASE}';"
+
+```
+
+![image](https://github.com/user-attachments/assets/59bccffe-757b-40f5-bfd8-260eb21c6d9e)
+
+![image](https://github.com/user-attachments/assets/a9061733-120d-4922-9a84-c237a23cbed1)
+
+Im phpMyAdmin
+
+![image](https://github.com/user-attachments/assets/a79e8682-9287-4b47-9bfb-0f8baf0604eb)
+
+Auf Docker 
+
+![image](https://github.com/user-attachments/assets/b2e09e60-2e3f-4e9e-8276-8802c2264b5a)
+
+![image](https://github.com/user-attachments/assets/e6b6e47c-d841-42cf-bb7c-a8079e7b3706)
+
+
 
 
 ## 8. Lernjournal
