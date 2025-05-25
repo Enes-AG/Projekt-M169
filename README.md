@@ -354,6 +354,28 @@ sudo systemctl restart apache2
 
 
 
+### 5.7 Upgrade auf Version 4.2.1
+
+```bash
+cd /tmp
+wget https://download.moodle.org/download.php/direct/stable402/moodle-latest-402.tgz -O moodle-402.tgz
+sudo systemctl stop apache2
+sudo mv /var/www/html /var/www/html_401_backup
+sudo tar -xzf /tmp/moodle-402.tgz -C /var/www/
+sudo mv /var/www/moodle /var/www/html
+sudo cp /var/www/html_401_backup/config.php /var/www/html/
+cd /var/www/html
+sudo chown -R $USER:$USER /var/www/html
+composer install --no-dev
+sudo chown -R www-data:www-data /var/www/html
+sudo -u www-data php -d max_input_vars=5000 /var/www/html/admin/cli/upgrade.php
+sudo systemctl start apache2
+```
+
+![image](https://github.com/user-attachments/assets/3a1e4acd-94ef-4221-9874-ead70d7eb962)
+
+![image](https://github.com/user-attachments/assets/db510008-db91-433c-97bf-95937214d4ec)
+
 
 
 
