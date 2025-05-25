@@ -167,15 +167,37 @@ Moodle läuft im Container über Port 8080, alle Daten sind vorhanden und es ist
 
 ![image](https://github.com/user-attachments/assets/9b545fa4-2b08-4864-ad9c-b9388e3e44a6)
 
+## 5. Lokales Moodle auf Version 4.5.2 upgraden 
+
+### 5.1 Backup machen
+
+```bash
+# Datenbank sichern
+sudo mysqldump -u root -p moodle > moodle_backup.sql
+
+# Moodle-Datenverzeichnis sichern
+cp -r /var/www/html/moodle /var/www/html/moodle_backup
+
+# Moodledata sichern
+sudo cp -a /var/www/moodledata /var/moodledata_backup
+```
+
+![image](https://github.com/user-attachments/assets/f6da29eb-a7bb-45b4-bb33-7aad4afecd1b)
+
+![image](https://github.com/user-attachments/assets/a8344e58-d85d-42ac-97e3-59ec614169ed)
+
+![image](https://github.com/user-attachments/assets/a709ceb0-7aca-4180-8fbd-3a31c30a423f)
 
 
 
+### 5.2
+
+```bash
+
+```
 
 
 
-
-
-## 5. Probleme & Lösung
 
 ## 6. Ergebnis & Fazit
 
