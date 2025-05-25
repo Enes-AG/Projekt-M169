@@ -641,4 +641,12 @@ phpMyAdmin ist über Port 8880 erreichbar und zeigt das die gesamte DB korrekt m
 [Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_3_Levin_Schöbi.pdf)
 
 ## 9. Quellenverzeichnis
-## 10. Netzwerkplan
+
+https://docs.moodle.org/500/en/Moodle_version
+https://download.moodle.org/releases/latest/
+https://hub.docker.com/
+https://www.reddit.com/
+
+https://chatgpt.com/ = für Errors 
+
+
