@@ -12,15 +12,15 @@
    - [Backup der alten Moodle-Version](#1-backup-der-alten-moodle-version)
    - [Docker-Setup für neue Version](#2-docker-setup-für-neue-version)
    - [Upgrade durchführen](#3-upgrade-durchführen)
-5. [Probleme & Lösungen](#probleme--lösungen)
+5. [Probleme & Lösungen](#probleme--loesungen)
 6. [Ergebnis & Fazit](#ergebnis--fazit)
 7. [Screenshots](#screenshots)
-8. [Lernjournal](#Lernjournal)
-   - [Lernjournal_Arin](#Lernjournal_Arin)
-   - [Lernjournal_Till](#Lernjournal_Till)
-   - [LernjournalLevin](#LernjournalLevin)
-9. [Quellenverzeichnis](#Quellenverzeichnis)
-10. [Netzwerkplan](#Netzwerkplan)
+8. [Lernjournal](#lernjournal)
+   - [Lernjournal_Arin](#lernjournal_Arin)
+   - [Lernjournal_Till](#lernjournal_Till)
+   - [LernjournalLevin](#lernjournalLevin)
+9. [Quellenverzeichnis](#quellenverzeichnis)
+10. [Netzwerkplan](#netzwerkplan)
 
 ##  1. Einleitung
 In diesem Projekt wurde die bestehende Moodle-Installation die auf einer Ubuntu VM läuft von der Version **3.10.11** auf die aktuelle **LTS-Version 4.5.2** erfolgreich upgegradet und in Docker Container migriert. Ausserdem wurde die alte Moodle Plattform (Version **3.10.11**) in eine Docker Umgebung verschoben und so konfiguriert das sie über den Port **8080** läuft, diese Umgebung wurde auch per Banner klar als veraltet gekenzeichnet. 
