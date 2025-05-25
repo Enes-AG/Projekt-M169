@@ -484,8 +484,14 @@ nano Dockerfile
 ![image](https://github.com/user-attachments/assets/533c7ea0-2e8b-46b1-b687-804f8070c145)
 
 
+### 6.7 Datenbank Dump erstellen
 
+```bash
+ cd ..
+ sudo mysqldump -u root -p moodle > ~/old_mysql_dump.sql 
+```
 
+![image](https://github.com/user-attachments/assets/b5c46b03-264d-49a5-a13f-c233c8d779f7)
 
 
 
