@@ -62,13 +62,18 @@ mkdir -p moodle-docker/{data,docker,dumps,wwwroot} && touch moodle-docker/docker
 ![image](https://github.com/user-attachments/assets/093dae61-77f5-4663-aaf8-4d0ff316e6ef)
 
 
-### 4.3 Anpassung PHP-Version
-PHP-Version anpassen in Docker-Compose.yaml wegen nicht unterstützer PHP Version **8.2**
+### 4.3 docker-compose.yml erstellen
+
 
 ```bash
-  moodle-web:
-    image: moodlehq/moodle-php-apache:8.1
+  nano docker-compose.yml
 ```
+
+Wichtig ist das man die Seite gemäss der Anforderung auf Port **8080** leitet. 
+
+![image](https://github.com/user-attachments/assets/d2c86b33-e2c1-430c-82b6-ad96746305f9)
+
+
 
 ### 4.4 Upgrade durchführen
 ```bash
