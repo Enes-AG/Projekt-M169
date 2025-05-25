@@ -5,22 +5,20 @@
 
 
 ##  Inhaltsverzeichnis
-1. [Einleitung](#einleitung)
-2. [Zielsetzung](#zielsetzung)
-3. [Ausgangslage](#ausgangslage)
-4. [Vorgehen](#vorgehen)
-   - [Backup der alten Moodle-Version](#1-backup-der-alten-moodle-version)
-   - [Docker-Setup für neue Version](#2-docker-setup-für-neue-version)
-   - [Upgrade durchführen](#3-upgrade-durchführen)
-5. [Probleme & Lösungen](#probleme--loesungen)
-6. [Ergebnis & Fazit](#ergebnis--fazit)
-7. [Screenshots](#screenshots)
-8. [Lernjournal](#lernjournal)
-   - [Lernjournal_Arin](#lernjournal_Arin)
-   - [Lernjournal_Till](#lernjournal_Till)
-   - [Lernjournal_Levin](#lernjournal_Levin)
-9. [Quellenverzeichnis](#quellenverzeichnis)
-10. [Netzwerkplan](#netzwerkplan)
+1. [Einleitung](#1-einleitung)
+2. [Zielsetzung](#2-zielsetzung)
+3. [Ausgangslage](#3-ausgangslage)
+4. [Vorgehen](#4-vorgehen-altes-moodle-31011-containersieren-mit-db)
+5. [Probleme & Lösungen](#5-probleme--lösungen)
+6. [Ergebnis & Fazit](#6-ergebnis--fazit)
+7. [Screenshots](#7-screenshots)
+8. [Lernjournal](#8-lernjournal)
+   - [Lernjournal_Arin](#81-lernjournal-arin)
+   - [Lernjournal_Till](#82-lernjournal-till)
+   - [Lernjournal_Levin](#83-lernjournal-levin)
+9. [Quellenverzeichnis](#9-quellenverzeichnis)
+10. [Netzwerkplan](#10-netzwerkplan)
+
 
 ##  1. Einleitung
 In diesem Projekt wurde die bestehende Moodle-Installation die auf einer Ubuntu VM läuft von der Version **3.10.11** auf die aktuelle **LTS-Version 4.5.2** erfolgreich upgegradet und in Docker Container migriert. Ausserdem wurde die alte Moodle Plattform (Version **3.10.11**) in eine Docker Umgebung verschoben und so konfiguriert das sie über den Port **8080** läuft, diese Umgebung wurde auch per Banner klar als veraltet gekenzeichnet. 
