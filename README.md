@@ -326,7 +326,7 @@ sudo -u www-data php -d max_input_vars=5000 /var/www/html/admin/cli/upgrade.php
 
 ![image](https://github.com/user-attachments/assets/dcbd941a-b89c-4120-a4b9-862c1d8e11cf)
 
-Nun ist es auf 4.0, jetz geht es auf 4.1.
+Nun ist es auf 4.0, jetzt geht es auf 4.1.
 
 ```bash
 cd /tmp
@@ -406,7 +406,7 @@ sudo -u www-data php -d max_input_vars=5000 admin/cli/upgrade.php
 ![image](https://github.com/user-attachments/assets/03ac834d-fd1d-4d25-82f2-84ecb4f83b86)
 
 
-Hiermit wurde Moodle auf der VM auf die Version 4.5.4 geupdatet samt allen DAten nun muss dieses System in eine Container Umgebung migriert werden.
+Hiermit wurde Moodle auf der VM auf die Version 4.5.4 geupdatet samt allen Daten nun muss dieses System in eine Container Umgebung migriert werden.
 
 
 
