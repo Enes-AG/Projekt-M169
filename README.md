@@ -416,7 +416,7 @@ Hiermit wurde Moodle auf der VM auf die Version 4.5.4 geupdatet samt allen Daten
 
 
 
-## 6. Migration der neuen Version 4.5.4 in die Container Umgebung
+## 6. Migration der neuen Version 4.5.2 in die Container Umgebung
 
 
 ### 6.1 Verzeichnisstruktur erstellen
@@ -555,6 +555,55 @@ Auf Docker
 ![image](https://github.com/user-attachments/assets/b2e09e60-2e3f-4e9e-8276-8802c2264b5a)
 
 ![image](https://github.com/user-attachments/assets/e6b6e47c-d841-42cf-bb7c-a8079e7b3706)
+
+Alle Daten der alten Lösung sind korrekt migriert. 
+
+
+### 6.9 Anforderungen überprüfen
+
+![image](https://github.com/user-attachments/assets/f2f6422d-c72b-4894-af30-a474e8b3c71c)
+
+
+```bash
+ cd ~/moodle-docker-setup
+docker-compose exec -T moodle \
+  grep "\$release" /var/www/html/version.php
+```
+
+![image](https://github.com/user-attachments/assets/f4cb2c77-cdf4-41bd-ae07-1a66cd24d3c9)
+
+
+Die Version stimmt.
+
+Nun schauen wir ob sie in einem eigenen Netzwerk läfut und ob es einzelne Container gibt.
+
+```bash
+ docker ps -a
+```
+![image](https://github.com/user-attachments/assets/98616288-6ad8-463f-849c-9fcc9e36c586)
+
+
+```bash
+ docker network inspect moodle-docker-setup_moodle_network
+```
+
+![image](https://github.com/user-attachments/assets/7833fb65-207a-484d-9006-d967b02f4df3)
+![image](https://github.com/user-attachments/assets/e9f94c2a-b749-4d9c-b32a-1a81e1d66dab)
+
+
+Die Docker Version ist richtig. 
+Die Container laufen in einem eigenen Netzwerk.
+
+
+### 6.11 phpMyAdmin
+
+phpMyAdmin ist über Port 8880 erreichbar und zeigt das die gesamte DB korrekt migriert wurde.
+
+![image](https://github.com/user-attachments/assets/55f2fb3b-79e8-4d1f-b7fb-0443946ef978)
+
+
+
+
 
 
 
