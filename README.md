@@ -133,6 +133,22 @@ docker compose up -d --build
 
 
 
+### 4.8 Prüfen ob es geklappt hat
+
+Moodle läuft im Container über Port 8080, alle Daten sind vorhanden und es ist klar als altes System gekenzeichnet. 
+
+![image](https://github.com/user-attachments/assets/4769d50c-1c66-4c7c-a73f-e0900bd4ceb7)
+
+
+![image](https://github.com/user-attachments/assets/4cef18aa-d1da-4610-bf84-092c56d06a55)
+
+
+![image](https://github.com/user-attachments/assets/902174c5-24cd-46e5-8806-8462f290105d)
+
+
+
+
+
 
 
 
