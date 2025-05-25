@@ -1,0 +1,4 @@
+# MariaDB Datenvolumes & moodledata
+db/data/
+moodle/moodledata/
+dataroot/

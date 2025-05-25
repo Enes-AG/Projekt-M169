@@ -1,0 +1,54 @@
+version: '3.9'
+
+services:
+  db:
+    image: mariadb:10.6
+    container_name: moodle-db-v1
+    restart: always
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./db/data:/var/lib/mysql
+      - ./db/moodle.sql:/docker-entrypoint-initdb.d/moodle.sql
+    networks:
+      - moodle_network
+
+  moodle:
+    build: ./moodle
+    container_name: moodle-app-v1
+    restart: always
+    ports:
+      - "${MOODLE_PORT}:80"
+    volumes:
+      - moodle_app_data:/var/www/html
+      - ./moodle/moodledata:/var/www/moodledata
+      - ./moodle/config.php:/var/www/html/config.php 
+    depends_on:
+      - db
+    networks:
+      - moodle_network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: moodle-phpmyadmin-v1
+    restart: always
+    ports:
+      - "${PHPMYADMIN_PORT}:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    depends_on:
+      - db
+    networks:
+      - moodle_network
+
+networks:
+  moodle_network:
+    external: false
+
+volumes:
+  moodle_app_data:
