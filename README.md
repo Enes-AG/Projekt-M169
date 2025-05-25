@@ -190,11 +190,16 @@ sudo cp -a /var/www/moodledata /var/moodledata_backup
 
 
 
-### 5.2
+### 5.2 Download der Moodle Version 3.11.17
+
+Das Moodle muss Schritt für Schritt geupgradtet werden weil es sonst zu Fehler kommen kann.
 
 ```bash
-
+cd /tmp
+wget https://download.moodle.org/download.php/direct/stable311/moodle-latest-311.tgz
 ```
+
+![image](https://github.com/user-attachments/assets/7ed51cec-22e7-4726-ad0e-200b5579bb66)
 
 
 
