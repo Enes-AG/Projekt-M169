@@ -504,12 +504,14 @@ nano Dockerfile
 
 
 
-### 6.7 
+### 6.7 Container bauen und hochfahren
 
 ```bash
- 
+ cd ~/moodle-docker-setup
+ docker-compose up -d --build
 ```
 
+![image](https://github.com/user-attachments/assets/d83a5e55-6243-42b4-8d2a-3959ff082c4b)
 
 
 
