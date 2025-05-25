@@ -488,10 +488,34 @@ nano Dockerfile
 
 ```bash
  cd ..
- sudo mysqldump -u root -p moodle > ~/old_mysql_dump.sql 
+ sudo mysqldump -u root -p moodle > ~/old_mysql_dump.sql
+ cp ~/moodle_backup.sql db/moodle.sql
+ rm -rf dataroot/*
+ tar xzf ~/moodle_backup_files.tar.gz -C dataroot
+ chmod -R 0777 dataroot
 ```
 
 ![image](https://github.com/user-attachments/assets/b5c46b03-264d-49a5-a13f-c233c8d779f7)
+
+![image](https://github.com/user-attachments/assets/3950be52-67cb-4e95-8ab8-847ff08485b4)
+
+![image](https://github.com/user-attachments/assets/ea047d9a-22db-42a1-b3f1-6d86f6812661)
+
+
+
+
+### 6.7 
+
+```bash
+ 
+```
+
+
+
+
+
+
+
 
 
 
