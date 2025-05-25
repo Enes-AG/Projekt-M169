@@ -637,6 +637,15 @@ phpMyAdmin ist über Port 8880 erreichbar und zeigt das die gesamte DB korrekt m
 ![image](https://github.com/user-attachments/assets/e7d01433-2018-433d-a9eb-94fb5fa40322)
 
 
+Login phpMyAdmin:
+
+Username: root
+Password: vaIdfgRPSXzKbPPd
+
+
+Alternativ kannst du auch moodleuser mit moodlepass verwenden – aber nur, wenn dieser User volle Rechte auf die DB hat.
+
+
 
 
 
