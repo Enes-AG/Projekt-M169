@@ -453,9 +453,22 @@ nano .env
 ![image](https://github.com/user-attachments/assets/05d98ff3-61aa-436d-adac-729f6479b768)
 
 
+### 6.4 Moodle-Source in master/ klonen
 
+```bash
+git clone https://github.com/moodle/moodle.git master --branch MOODLE_405_STABLE --depth 1
+```
 
+![image](https://github.com/user-attachments/assets/a20cdcc5-91d5-4abf-821d-db95e3e2d03f)
 
+### 6.5 config.php erstellen
+
+```bash
+ cd master/
+ nano config.php
+```
+
+![image](https://github.com/user-attachments/assets/ed0518b5-4de9-4bff-9241-61c3aa01c6a5)
 
 
 
