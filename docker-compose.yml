@@ -22,10 +22,10 @@ services:
     depends_on:
       - db
     ports:
-      - "8080:80"
+      - "8080:80"                                  #Wurde am 24.05.2025 von 80:80 auf 8080:80 geändert.
     volumes:
-      - ./wwwroot:/var/www/html
-      - ./data/moodledata:/var/moodledata
+      - ./wwwroot:/var/www/html      
+      - ./data/moodledata:/var/moodledata         #Wurde am 24.05.2025 hinzugefügt.
     networks:
       - moodle-net
 
