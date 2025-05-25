@@ -15,6 +15,7 @@
 5. [Probleme & Lösungen](#probleme--lösungen)
 6. [Ergebnis & Fazit](#ergebnis--fazit)
 7. [Screenshots](#screenshots)
+8. [Lernjournal](#Lernjournal)
 
 ##  1. Einleitung
 In diesem Projekt wurde die bestehende Moodle-Installation die auf einer Ubuntu VM läuft von der Version **3.10.11** auf die aktuelle **LTS-Version 4.5.2** erfolgreich upgegradet und in Docker Container migriert. Ausserdem wurde die alte Moodle Plattform (Version **3.10.11**) in eine Docker Umgebung verschoben und so konfiguriert das sie über den Port **8080** läuft, diese Umgebung wurde auch per Banner klar als veraltet gekenzeichnet. 
@@ -525,6 +526,9 @@ nano Dockerfile
 ![image](https://github.com/user-attachments/assets/30d9d3fe-5208-4288-b391-f6c65d8f7321)
 
 
+## 8. Lernjournal
+
+[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_1_Arin_Erenler.pdf)
 
 
 ## 7. Quellenverzeichnis
