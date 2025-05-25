@@ -220,6 +220,117 @@ sudo mv /var/www/moodle /var/www/html
 ![image](https://github.com/user-attachments/assets/342b099e-8d1d-4a1e-abe5-d4e8eb6087f4)
 
 
+### 5.4 config.php zurückkopieren & Dateirechte prüfen
+
+```bash
+sudo cp /var/www/html_old/config.php /var/www/html/
+sudo find /var/www/html -type f -exec chmod 0644 {} \;
+sudo find /var/www/html -type d -exec chmod 0755 {} \;
+```
+
+![image](https://github.com/user-attachments/assets/d058fc3b-8d9b-45d6-a6c8-705c5e04a345)
+
+![image](https://github.com/user-attachments/assets/163fbbdd-2c46-4fd6-bace-54506d6dd672)
+
+
+### 5.5 Upgrade ausführen auf Version 3.11.17
+
+Diese Fehlermeldung kam:
+
+![image](https://github.com/user-attachments/assets/ea5f4776-354f-4cb1-aed8-72aaed3a5c3c)
+
+Diese Befehle wurden ausgeführt.
+
+```bash
+sudo -u www-data php /var/www/html/admin/cli/upgrade.php
+sudo apt install php8.1-mysqli
+sudo systemctl restart apache2
+sudo phpenmod mysqli
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php8.0 php8.0-cli php8.0-common php8.0-mysql php8.0-xml php8.0-mbstring php8.0-curl php8.0-zip php8.0-gd php8.0-soap php8.0-intl
+sudo a2dismod php8.1
+sudo a2enmod php8.0
+sudo update-alternatives --set php /usr/bin/php8.0
+sudo systemctl restart apache2
+sudo -u www-data php /var/www/html/admin/cli/upgrade.php
+```
+
+Danach kam diese Meldung:
+
+![image](https://github.com/user-attachments/assets/5656c658-106b-44ce-9257-9109188a08e2)
+
+```bash
+sudo nano /etc/php/8.0/apache2/php.ini
+sudo nano /etc/php/8.0/cli/php.ini
+```
+
+Die max_input_vars müssen von 1000 auf 5000 erhöht werden. 
+Das ganze im php.ini.
+
+
+![image](https://github.com/user-attachments/assets/dffaeca0-c006-457f-a97c-e2da776e3c13)
+
+
+Zu
+
+
+![image](https://github.com/user-attachments/assets/84574934-7e21-47b6-9c06-80aec0f09006)
+
+
+
+Nun kann man localhost aufrufen und das Upgrade per Web Interface starten.
+
+![image](https://github.com/user-attachments/assets/2d7b377f-2940-4f2e-bb32-1ddf4a8fd7dd)
+
+![image](https://github.com/user-attachments/assets/31a8fe60-8162-4663-ae28-b8294d5a8842)
+
+![image](https://github.com/user-attachments/assets/e656f4fa-ed53-42ad-8969-a24c2d436b00)
+
+![image](https://github.com/user-attachments/assets/68837dd9-a9f5-41e6-8d6e-1d9a6d6b1354)
+
+![image](https://github.com/user-attachments/assets/fe7e9369-c1b7-42ae-a3b4-9855f5074d90)
+
+![image](https://github.com/user-attachments/assets/fd5fb8cd-a1b0-4a07-a0d5-1f08346e3a23)
+
+![image](https://github.com/user-attachments/assets/29da9d33-5949-4c88-a7a5-6fe6b5a3260c)
+
+![image](https://github.com/user-attachments/assets/678a04e2-0240-4d19-a7de-82ef5329be88)
+
+![image](https://github.com/user-attachments/assets/165c2301-ec55-45bb-be19-4c72a2982699)
+
+![image](https://github.com/user-attachments/assets/2c1aeb1a-b9ca-43dd-bd52-f143cb30f8c9)
+
+Das Upgrade ist erfolgreich.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## 6. Ergebnis & Fazit
