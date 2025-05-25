@@ -472,5 +472,24 @@ git clone https://github.com/moodle/moodle.git master --branch MOODLE_405_STABLE
 
 
 
+
+### 6.6 Dockerfile erstellen
+
+```bash
+ cd moodle/
+nano Dockerfile
+```
+
+
+![image](https://github.com/user-attachments/assets/533c7ea0-2e8b-46b1-b687-804f8070c145)
+
+
+
+
+
+
+
+
+
 ## 7. Quellenverzeichnis
 ## 8. Netzwerkplan
