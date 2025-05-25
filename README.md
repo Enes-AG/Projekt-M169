@@ -17,7 +17,7 @@
 7. [Screenshots](#screenshots)
 
 ## 📃 1. Einleitung
-In diesem Projekt wurde die bestehende Moodle-Installation die auf einer Ubuntu VM läuft von der Version **3.10.11** auf die aktuelle **LTS-Version 4.5.2** erfolgreich upgegradet und in Docker Container migriert. Ausserdem wurde die alte Moodle Plattform (Version **3.10.11**) in eine Docker Umgebung verschoben und so konfiguriert das sie über den Port 8080 läuft, diese Umgebung wurde auch per Banner klar als veraltet gekenzeichnet. 
+In diesem Projekt wurde die bestehende Moodle-Installation die auf einer Ubuntu VM läuft von der Version **3.10.11** auf die aktuelle **LTS-Version 4.5.2** erfolgreich upgegradet und in Docker Container migriert. Ausserdem wurde die alte Moodle Plattform (Version **3.10.11**) in eine Docker Umgebung verschoben und so konfiguriert das sie über den Port **8080** läuft, diese Umgebung wurde auch per Banner klar als veraltet gekenzeichnet. 
 
 ## 🎯 2. Zielsetzung
 - Upgrade auf aktuelle Moodle-Version
@@ -52,7 +52,7 @@ docker exec -it moodle-db mysql -u root -proot moodle < /moodle_db_backup.sql
 ```
 
 ### 4.3 Anpassung PHP-Version
-PHP-Version anpassen in Docker-Compose.yaml wegen nicht unterstützer PHP Version 8.2
+PHP-Version anpassen in Docker-Compose.yaml wegen nicht unterstützer PHP Version **8.2**
 
 ```bash
   moodle-web:
