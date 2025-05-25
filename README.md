@@ -124,6 +124,13 @@ nano ~/moodle-docker/wwwroot/config.php
 ![image](https://github.com/user-attachments/assets/3bc6c34c-b85e-46a4-a7aa-3355d275a59b)
 
 
+### 4.7 Container starten (bauen)
+
+```bash
+docker compose up -d --build
+```
+![image](https://github.com/user-attachments/assets/b0fd82db-4878-4a0f-b820-84d67886b595)
+
 
 
 
