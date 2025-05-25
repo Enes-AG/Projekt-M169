@@ -4,7 +4,7 @@
 
 
 
-## 📑 Inhaltsverzeichnis
+##  Inhaltsverzeichnis
 1. [Einleitung](#einleitung)
 2. [Zielsetzung](#zielsetzung)
 3. [Ausgangslage](#ausgangslage)
@@ -16,17 +16,20 @@
 6. [Ergebnis & Fazit](#ergebnis--fazit)
 7. [Screenshots](#screenshots)
 
-## 📃 1. Einleitung
+##  1. Einleitung
 In diesem Projekt wurde die bestehende Moodle-Installation die auf einer Ubuntu VM läuft von der Version **3.10.11** auf die aktuelle **LTS-Version 4.5.2** erfolgreich upgegradet und in Docker Container migriert. Ausserdem wurde die alte Moodle Plattform (Version **3.10.11**) in eine Docker Umgebung verschoben und so konfiguriert das sie über den Port **8080** läuft, diese Umgebung wurde auch per Banner klar als veraltet gekenzeichnet. 
 
-## 🎯 2. Zielsetzung
-- Upgrade auf aktuelle Moodle-Version
+##  2. Zielsetzung
+- Upgrade auf aktuelle Moodle-Version (4.5.2)
 - Nutzung von Docker zur Containerisierung
-- Absicherung durch Datenbank- und Dateibackups
+- Alle Daten der alten Lösung sind korrekt migriert.
+- Altes System noch lauffähig unter Port 8080 (klare Kennzeichnung)
+- Die Lösung soll in unterschiedlichen Containern in einem eigenen Netzwerk
+lauffähig sein.
 - Dokumentation für Reproduzierbarkeit
 
 
-## 🔍 3. Ausgangslage
+##  3. Ausgangslage
 
 | Komponente       | Version/Status         |
 |------------------|------------------------|
@@ -35,7 +38,7 @@ In diesem Projekt wurde die bestehende Moodle-Installation die auf einer Ubuntu 
 | Datenbank        | MariaDB                |
 | Containerisierung| Noch nicht vorhanden   |
 
-## 🚶‍♂️‍➡️4. Vorgehen
+## 4. Vorgehen
 
 ### 4.1 Backup der alten Moodle-Version
 ```bash
@@ -72,4 +75,4 @@ docker exec -it moodle-web php admin/cli/upgrade.php
 
 
 ## 7. Quellenverzeichnis
-## 🛜 8. Netzwerkplan
+## 8. Netzwerkplan
