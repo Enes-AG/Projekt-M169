@@ -18,7 +18,7 @@
 8. [Lernjournal](#lernjournal)
    - [Lernjournal_Arin](#lernjournal_Arin)
    - [Lernjournal_Till](#lernjournal_Till)
-   - [LernjournalLevin](#lernjournalLevin)
+   - [Lernjournal_Levin](#lernjournal_Levin)
 9. [Quellenverzeichnis](#quellenverzeichnis)
 10. [Netzwerkplan](#netzwerkplan)
 
@@ -618,27 +618,31 @@ phpMyAdmin ist über Port 8880 erreichbar und zeigt das die gesamte DB korrekt m
 ## 8. Lernjournal
 ### 8.1 Lernjournal Arin
 
-[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_1_Arin_Erenler.pdf)
+[Lernjournal Nr. 1](./Lernjournal/Lernjournal_1_Arin_Erenler.pdf)
 
-[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_2_Arin_Erenler.pdf)
+[Lernjournal Nr. 2](./Lernjournal/Lernjournal_2_Arin_Erenler.pdf)
 
-[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_3_Arin_Erenler.pdf)
+[Lernjournal Nr. 3](./Lernjournal/Lernjournal_3_Arin_Erenler.pdf)
 
 ### 8.2 Lernjournal Till
 
-[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_1_Till_Schmuki.pdf)
+[Lernjournal Nr. 1](./Lernjournal/Lernjournal_1_Till_Schmuki.pdf)
 
-[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_2_Till_Schmuki.pdf)
+[Lernjournal Nr. 2](./Lernjournal/Lernjournal_2_Till_Schmuki.pdf)
 
-[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_3_Till_Schmuki.pdf)
+[Lernjournal Nr. 3](./Lernjournal/Lernjournal_3_Till_Schmuki.pdf)
 
 ### 8.3 Lernjournal Levin
 
-[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_1_Levin_Schöbi.pdf)
+[Lernjournal Nr. 1](./Lernjournal/Lernjournal_1_Levin_Schöbi.pdf)
 
-[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_2_Levin_Schöbi.pdf)
+[Lernjournal Nr. 2](./Lernjournal/Lernjournal_2_Levin_Schöbi.pdf)
 
-[Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_3_Levin_Schöbi.pdf)
+[Lernjournal Nr. 3](./Lernjournal/Lernjournal_3_Levin_Schöbi.pdf)
+
+### 8.3 Reflexion Gruppe
+[Reflexion_Gruppe](./Lernjournal/Reflexion_Gruppe.pdf)
+
 
 ## 9. Quellenverzeichnis
 
