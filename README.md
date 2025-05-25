@@ -40,10 +40,12 @@ lauffähig sein.
 
 ## 4. Vorgehen altes Moodle 3.10.11 Containersieren samt DB
 
-### 4.1 VM starten & Pakete und Paketlisten aktualieren
+### 4.1 VM starten & Pakete und Paketlisten aktualieren und Docker installieren
 ```bash
 sudo apt update
 sudo apt upgrade
+sudo snap install docker
+sudo apt  install docker-compose
 ```
 
 Wenn man sudo apt upgrade durchführt taucht zweimal diese Meldung auf.
