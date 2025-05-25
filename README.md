@@ -370,6 +370,8 @@ composer install --no-dev
 sudo chown -R www-data:www-data /var/www/html
 sudo -u www-data php -d max_input_vars=5000 /var/www/html/admin/cli/upgrade.php
 sudo systemctl start apache2
+sudo apt install php8.1-intl
+sudo systemctl restart apache2
 ```
 
 ![image](https://github.com/user-attachments/assets/3a1e4acd-94ef-4221-9874-ead70d7eb962)
@@ -378,6 +380,37 @@ sudo systemctl start apache2
 
 
 
+### 5.8 Upgrade auf Version 4.5.4
+
+```bash
+cd /tmp
+wget https://download.moodle.org/download.php/direct/stable405/moodle-latest-405.tgz -O moodle-405.tgz
+sudo systemctl stop apache2
+sudo mv /var/www/html /var/www/html_423_backup
+sudo tar -xzf /tmp/moodle-405.tgz -C /var/www/
+sudo mv /var/www/moodle /var/www/html
+sudo cp /var/www/html_423_backup/config.php /var/www/html/
+cd /var/www/html
+sudo update-alternatives --set php /usr/bin/php8.1
+sudo apt install php8.1-curl php8.1-zip php8.1-gd
+sudo systemctl restart apache2
+sudo chown -R $USER:$USER /var/www/html
+composer install --no-dev
+sudo -u www-data php -d max_input_vars=5000 admin/cli/upgrade.php
+```
+
+![image](https://github.com/user-attachments/assets/b1c55536-2ca9-49bd-a10c-332b16a716fc)
+
+![image](https://github.com/user-attachments/assets/17223248-0915-47fc-a035-eb2d8c731c97)
+
+![image](https://github.com/user-attachments/assets/03ac834d-fd1d-4d25-82f2-84ecb4f83b86)
+
+
+Hiermit wurde Moodle auf der VM auf die Version 4.5.4 geupdatet samt allen DAten nun muss dieses System in eine Container Umgebung migriert werden.
+
+
+
+## 6. Migration der neuen Version 4.5.4 in die Container Umgebung
 
 
 
@@ -395,11 +428,6 @@ sudo systemctl start apache2
 
 
 
-
-
-
-
-## 6. Ergebnis & Fazit
 
 
 ## 7. Quellenverzeichnis
