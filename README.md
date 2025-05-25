@@ -93,6 +93,20 @@ Auf die richtige PHP Version achten!
 ![image](https://github.com/user-attachments/assets/8c029207-1eab-42d5-92b5-278b3affeb69)
 
 
+
+### 4.4 DB Dump erstellen 
+
+Nun muss ein Datenbank Dump erstellt werden damit die Daten übernommen werden. 
+
+```bash
+sudo mysqldump -u root -p moodle > dumps/moodle-dump.sql
+
+```
+
+![image](https://github.com/user-attachments/assets/3f2a01ac-6050-481d-9878-82f7699780a7)
+
+
+
 ## 5. Probleme & Lösung
 
 ## 6. Ergebnis & Fazit
