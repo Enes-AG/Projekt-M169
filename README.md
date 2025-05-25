@@ -64,8 +64,10 @@ mkdir -p moodle-docker/{data,docker,dumps,wwwroot} && touch moodle-docker/docker
 
 ### 4.3 docker-compose.yml erstellen
 
+Auf den erstellten Ordner **moodle-docker** springen, darin befindet sich das docker-compose.yml.
 
 ```bash
+  cd moodle-docker
   nano docker-compose.yml
 ```
 
