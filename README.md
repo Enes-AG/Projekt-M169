@@ -77,12 +77,21 @@ Wichtig ist das man die Seite gemäss der Anforderung auf Port **8080** leitet.
 
 
 
-### 4.4 Upgrade durchführen
+### 4.4 Dockerfile erstellen
+
+Nun muss ein passendes Dockerfile erstellt werden.
+
 ```bash
-docker cp moodle-4.1.11/ moodle-web:/var/www/html/
-docker cp config.php.backup moodle-web:/var/www/html/config.php
-docker exec -it moodle-web php admin/cli/upgrade.php
+cd docker/
+mkdir moodle
+cd moodle/
+nano Dockerfile
 ```
+
+Auf die richtige PHP Version achten!
+
+![image](https://github.com/user-attachments/assets/8c029207-1eab-42d5-92b5-278b3affeb69)
+
 
 ## 5. Probleme & Lösung
 
