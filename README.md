@@ -23,9 +23,9 @@ In diesem Projekt wurde die bestehende Moodle-Installation die auf einer Ubuntu 
 - Upgrade auf aktuelle Moodle-Version (4.5.2)
 - Nutzung von Docker zur Containerisierung
 - Alle Daten der alten Lösung sind korrekt migriert.
-- Altes System noch lauffähig unter Port 8080 (klare Kennzeichnung)
+- Altes System noch funktionsfähig unter Port 8080 (klare Kennzeichnung)
 - Die Lösung soll in unterschiedlichen Containern in einem eigenen Netzwerk
-lauffähig sein.
+  funktionsfähig sein.
 - Dokumentation für Reproduzierbarkeit
 
 
@@ -38,7 +38,7 @@ lauffähig sein.
 | Datenbank        | MySQL                  |
 | Containerisierung| Noch nicht vorhanden   |
 
-## 4. Vorgehen altes Moodle 3.10.11 Containersieren samt DB
+## 4. Vorgehen altes Moodle 3.10.11 Containersieren mit DB
 
 ### 4.1 VM starten & Pakete und Paketlisten aktualieren und Docker installieren
 ```bash
@@ -53,7 +53,7 @@ Man sollte beide male die oberste Option anwählen und mit Enter bestätigen.
 
 ![Screenshot 2025-05-25 164421](https://github.com/user-attachments/assets/2967f1e8-e704-4b09-9b64-b7d46de98933)
 
-Nachdem alles durchgelaufen ist die VM neustarten.
+Nachdem alles durchgelaufen ist, die VM neustarten.
 
 ### 4.2 Verzeichnis erstellen
 
