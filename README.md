@@ -67,7 +67,8 @@ Nachdem alles durchgelaufen ist, die VM neustarten.
 mkdir -p moodle-docker/{data,docker,dumps,wwwroot} && touch moodle-docker/docker-compose.yml
 ```
 
-![image](https://github.com/user-attachments/assets/093dae61-77f5-4663-aaf8-4d0ff316e6ef)
+![image](https://github.com/user-attachments/assets/67875a0c-9b7b-40d6-b3c3-c030c7f644c7)
+
 
 
 ### 4.3 docker-compose.yml erstellen
@@ -81,7 +82,7 @@ Auf den erstellten Ordner **moodle-docker** springen, darin befindet sich das do
 
 Wichtig ist das man die Seite gemäss der Anforderung auf Port **8080** leitet. 
 
-![image](https://github.com/user-attachments/assets/d2c86b33-e2c1-430c-82b6-ad96746305f9)
+![image](https://github.com/user-attachments/assets/4c122b03-2a86-44c9-ba84-c519cd0082b9)
 
 
 
@@ -167,11 +168,12 @@ Moodle läuft im Container über Port 8080, alle Daten sind vorhanden und es ist
 ![image](https://github.com/user-attachments/assets/4cef18aa-d1da-4610-bf84-092c56d06a55)
 
 
-![image](https://github.com/user-attachments/assets/902174c5-24cd-46e5-8806-8462f290105d)
+![image](https://github.com/user-attachments/assets/aacb1c95-0f0a-4547-8a92-42049b95b78c)
 
 ![image](https://github.com/user-attachments/assets/275ad082-6484-4fed-b7d4-1fe93ecf0cfe)
 
-![image](https://github.com/user-attachments/assets/9b545fa4-2b08-4864-ad9c-b9388e3e44a6)
+![image](https://github.com/user-attachments/assets/47076468-9138-4be4-8138-f5f2c27909c5)
+
 
 ## 5. Lokales Moodle auf Version 4.5.2 upgraden 
 
@@ -289,7 +291,7 @@ Nun kann man localhost aufrufen und das Upgrade per Web Interface starten.
 
 ![image](https://github.com/user-attachments/assets/2d7b377f-2940-4f2e-bb32-1ddf4a8fd7dd)
 
-![image](https://github.com/user-attachments/assets/31a8fe60-8162-4663-ae28-b8294d5a8842)
+![image](https://github.com/user-attachments/assets/34403c9c-92db-48d7-a66a-56706bedf20d)
 
 ![image](https://github.com/user-attachments/assets/e656f4fa-ed53-42ad-8969-a24c2d436b00)
 
@@ -301,11 +303,11 @@ Nun kann man localhost aufrufen und das Upgrade per Web Interface starten.
 
 ![image](https://github.com/user-attachments/assets/29da9d33-5949-4c88-a7a5-6fe6b5a3260c)
 
-![image](https://github.com/user-attachments/assets/678a04e2-0240-4d19-a7de-82ef5329be88)
+![image](https://github.com/user-attachments/assets/82506e9d-0d2f-40a9-8218-bc34e2745798)
 
-![image](https://github.com/user-attachments/assets/165c2301-ec55-45bb-be19-4c72a2982699)
+![image](https://github.com/user-attachments/assets/3f3f769c-728a-4aab-8659-62c0625f42d1)
 
-![image](https://github.com/user-attachments/assets/2c1aeb1a-b9ca-43dd-bd52-f143cb30f8c9)
+
 
 Das Upgrade ist erfolgreich.
 
@@ -351,11 +353,11 @@ sudo systemctl restart apache2
 ```
 
 
-![image](https://github.com/user-attachments/assets/6ba222d2-9716-4a9c-8cce-8574ae0f6032)
+![image](https://github.com/user-attachments/assets/761b2641-a67c-49c3-b5ed-8592b72bf159)
 
 ![image](https://github.com/user-attachments/assets/b7a69dfd-1370-4a28-9bc6-df15e5407fff)
 
-![image](https://github.com/user-attachments/assets/58157ded-7922-4460-928f-91e84f31fae4)
+![image](https://github.com/user-attachments/assets/e2c35e04-4e66-402a-81b4-1cc7244cce5c)
 
 
 
@@ -474,7 +476,7 @@ git clone https://github.com/moodle/moodle.git master --branch MOODLE_405_STABLE
  nano config.php
 ```
 
-![image](https://github.com/user-attachments/assets/ed0518b5-4de9-4bff-9241-61c3aa01c6a5)
+![image](https://github.com/user-attachments/assets/ca709b6c-ac46-4438-a4c3-45311c860c7b)
 
 
 
@@ -501,16 +503,17 @@ nano Dockerfile
  chmod -R 0777 dataroot
 ```
 
-![image](https://github.com/user-attachments/assets/b5c46b03-264d-49a5-a13f-c233c8d779f7)
 
-![image](https://github.com/user-attachments/assets/3950be52-67cb-4e95-8ab8-847ff08485b4)
+![image](https://github.com/user-attachments/assets/f926f972-5f23-4d66-8cc9-c3e6c80d225c)
 
-![image](https://github.com/user-attachments/assets/ea047d9a-22db-42a1-b3f1-6d86f6812661)
+![image](https://github.com/user-attachments/assets/76c28322-721e-4fc3-9214-bd9c57a9842e)
+
+![image](https://github.com/user-attachments/assets/3d768817-8c35-4ae2-acf8-77206b067f33)
 
 
 
 
-### 6.7 Container bauen und hochfahren
+### 6.8 Container bauen und hochfahren
 
 ```bash
  cd ~/moodle-docker-setup
@@ -521,13 +524,14 @@ nano Dockerfile
 ![image](https://github.com/user-attachments/assets/d83a5e55-6243-42b4-8d2a-3959ff082c4b)
 
 
-### 6.8 Schauen ob alle Daten korrekt migriert worden
+### 6.9 Schauen ob alle Daten korrekt migriert worden
 
 ```bash
  docker-compose logs db | grep -i initdb
 ```
 
-![image](https://github.com/user-attachments/assets/30d9d3fe-5208-4288-b391-f6c65d8f7321)
+![image](https://github.com/user-attachments/assets/e2927100-75f2-4a33-85d8-52eaad9410b7)
+
 
 
 ```bash
@@ -542,9 +546,10 @@ docker-compose exec -T db \
 
 ```
 
-![image](https://github.com/user-attachments/assets/59bccffe-757b-40f5-bfd8-260eb21c6d9e)
+![image](https://github.com/user-attachments/assets/b9782c19-5b0a-4915-b9c5-348715a4fb76)
 
-![image](https://github.com/user-attachments/assets/a9061733-120d-4922-9a84-c237a23cbed1)
+![image](https://github.com/user-attachments/assets/6419ad0f-fd42-4849-9ef5-06b71cac1646)
+
 
 Im phpMyAdmin
 
@@ -559,7 +564,7 @@ Auf Docker
 Alle Daten der alten Lösung sind korrekt migriert. 
 
 
-### 6.9 Anforderungen überprüfen
+### 6.10 Anforderungen überprüfen
 
 ![image](https://github.com/user-attachments/assets/f2f6422d-c72b-4894-af30-a474e8b3c71c)
 
@@ -580,7 +585,8 @@ Nun schauen wir ob sie in einem eigenen Netzwerk läfut und ob es einzelne Conta
 ```bash
  docker ps -a
 ```
-![image](https://github.com/user-attachments/assets/98616288-6ad8-463f-849c-9fcc9e36c586)
+![image](https://github.com/user-attachments/assets/b4e333b8-b69d-49a6-a782-9fb6d9943ec0)
+
 
 
 ```bash
@@ -599,7 +605,8 @@ Die Container laufen in einem eigenen Netzwerk.
 
 phpMyAdmin ist über Port 8880 erreichbar und zeigt das die gesamte DB korrekt migriert wurde.
 
-![image](https://github.com/user-attachments/assets/55f2fb3b-79e8-4d1f-b7fb-0443946ef978)
+![image](https://github.com/user-attachments/assets/e7d01433-2018-433d-a9eb-94fb5fa40322)
+
 
 
 
