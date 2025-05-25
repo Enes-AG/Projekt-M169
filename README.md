@@ -40,10 +40,10 @@ lauffähig sein.
 
 ## 4. Vorgehen
 
-### 4.1 Backup der alten Moodle-Version
+### 4.1 VM starten & Pakete und Paketlisten aktualieren
 ```bash
-sudo mysqldump -u root moodle > moodle_db_backup.sql
-sudo cp /var/www/html/config.php ~/config.php.backu
+sudo apt update
+sudo apt upgrade
 ```
 
 ### 4.2 Docker-Setup für neue Version
