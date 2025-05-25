@@ -46,6 +46,11 @@ sudo apt update
 sudo apt upgrade
 ```
 
+Wenn man sudo apt upgrade durchführt taucht zweimal diese Meldung auf.
+Man sollte beide male die oberste Option anwählen und mit Enter bestätigen.
+
+<![Screenshot 2025-05-25 164421](https://github.com/user-attachments/assets/2967f1e8-e704-4b09-9b64-b7d46de98933)>
+
 ### 4.2 Docker-Setup für neue Version
 
 ```bash
