@@ -305,7 +305,51 @@ Das Upgrade ist erfolgreich.
 
 
 
+### 5.6 Upgrade auf Version 4.1
 
+```bash
+cd /tmp
+sudo systemctl stop apache2
+sudo mv /var/www/html /var/www/html_311_backup
+sudo tar -xzf /tmp/moodle-400.tgz -C /var/www/
+sudo mv /var/www/moodle /var/www/html
+sudo cp /var/www/html_311_backup/config.php /var/www/html/
+sudo apt install composer
+sudo chown -R $USER:$USER /var/www/html
+composer install --no-dev
+sudo -u www-data php -d max_input_vars=5000 /var/www/html/admin/cli/upgrade.php
+```
+
+![image](https://github.com/user-attachments/assets/4b12a778-6821-4dd2-aa7e-e2b3b89353ac)
+
+![image](https://github.com/user-attachments/assets/adb43df9-1cc9-48d2-aa83-a643c5ff4f22)
+
+![image](https://github.com/user-attachments/assets/dcbd941a-b89c-4120-a4b9-862c1d8e11cf)
+
+Nun ist es auf 4.0, jetz geht es auf 4.1.
+
+```bash
+cd /tmp
+wget https://download.moodle.org/download.php/direct/stable401/moodle-latest-401.tgz -O moodle-401.tgz
+sudo systemctl stop apache2
+sudo mv /var/www/html /var/www/html_400_backup
+sudo tar -xzf /tmp/moodle-401.tgz -C /var/www/
+sudo mv /var/www/moodle /var/www/html
+sudo cp /var/www/html_400_backup/config.php /var/www/html/
+sudo apt install composer
+composer install --no-dev
+sudo chown -R www-data:www-data /var/www/html
+sudo -u www-data php -d max_input_vars=5000 /var/www/html/admin/cli/upgrade.php
+sudo apt install php8.1-mbstring
+sudo systemctl restart apache2
+```
+
+
+![image](https://github.com/user-attachments/assets/6ba222d2-9716-4a9c-8cce-8574ae0f6032)
+
+![image](https://github.com/user-attachments/assets/b7a69dfd-1370-4a28-9bc6-df15e5407fff)
+
+![image](https://github.com/user-attachments/assets/58157ded-7922-4460-928f-91e84f31fae4)
 
 
 
