@@ -38,7 +38,7 @@ lauffähig sein.
 | Datenbank        | MySQL                  |
 | Containerisierung| Noch nicht vorhanden   |
 
-## 4. Vorgehen
+## 4. Vorgehen altes Moodle 3.10.11 Containersieren samt DB
 
 ### 4.1 VM starten & Pakete und Paketlisten aktualieren
 ```bash
@@ -51,13 +51,16 @@ Man sollte beide male die oberste Option anwählen und mit Enter bestätigen.
 
 ![Screenshot 2025-05-25 164421](https://github.com/user-attachments/assets/2967f1e8-e704-4b09-9b64-b7d46de98933)
 
-### 4.2 Docker-Setup für neue Version
+Nachdem alles durchgelaufen ist die VM neustarten.
+
+### 4.2 Verzeichnis erstellen
 
 ```bash
-docker-compose up -d
-docker cp moodle_db_backup.sql moodle-db:/moodle_db_backup.sql
-docker exec -it moodle-db mysql -u root -proot moodle < /moodle_db_backup.sql
+mkdir -p moodle-docker/{data,docker,dumps,wwwroot} && touch moodle-docker/docker-compose.yml
 ```
+
+![image](https://github.com/user-attachments/assets/093dae61-77f5-4663-aaf8-4d0ff316e6ef)
+
 
 ### 4.3 Anpassung PHP-Version
 PHP-Version anpassen in Docker-Compose.yaml wegen nicht unterstützer PHP Version **8.2**
