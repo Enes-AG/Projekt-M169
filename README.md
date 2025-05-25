@@ -415,13 +415,17 @@ Hiermit wurde Moodle auf der VM auf die Version 4.5.4 geupdatet samt allen Daten
 
 ### 6.1 Verzeichnisstruktur erstellen
 
+## Project Structure
+
+```bash
 moodle-docker-setup/
 ├── dataroot/            # Moodle’s uploaded files and private data directory
 ├── db/                  # Persistente Datenbankdateien und Dumps
 ├── docker-compose.yml   # Definition der Docker-Services und Netzwerke
-├── master/              # Haupt-Branch oder zentraler Projekt-Code (z.B. Git-Master)
+├── master/              # Haupt-Branch oder zentraler Projekt-Code
 ├── moodle/              # Moodle-Anwendung (Source, Dockerfile, config.php)
 └── phpmyadmin/          # phpMyAdmin-Konfiguration und Assets
+
 
 ```bash
 mkdir -p moodle-docker-setup/{dataroot,db,master,moodle,phpmyadmin} \
