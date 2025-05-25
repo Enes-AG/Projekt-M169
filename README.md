@@ -202,6 +202,24 @@ wget https://download.moodle.org/download.php/direct/stable311/moodle-latest-311
 ![image](https://github.com/user-attachments/assets/7ed51cec-22e7-4726-ad0e-200b5579bb66)
 
 
+### 5.3  Moodle-Dateien ersetzen
+
+```bash
+sudo systemctl stop apache2
+sudo mv /var/www/html /var/www/html_old
+sudo tar -xzf /tmp/moodle-latest-311.tgz -C /var/www/
+sudo mv /var/www/moodle /var/www/html
+```
+
+![image](https://github.com/user-attachments/assets/5f5db247-52ca-44a7-80c9-ec654daf4ed3)
+
+![image](https://github.com/user-attachments/assets/1a65d6d8-bdd2-4850-b379-701787926913)
+
+![image](https://github.com/user-attachments/assets/fcfbe79e-083c-4d46-b32e-6bd9a3b9d4b3)
+
+![image](https://github.com/user-attachments/assets/342b099e-8d1d-4a1e-abe5-d4e8eb6087f4)
+
+
 
 
 ## 6. Ergebnis & Fazit
