@@ -19,6 +19,8 @@
    - [Lernjournal_Arin](#Lernjournal_Arin)
    - [Lernjournal_Till](#Lernjournal_Till)
    - [LernjournalLevin](#LernjournalLevin)
+9. [Quellenverzeichnis](#Quellenverzeichnis)
+10. [Netzwerkplan](#Netzwerkplan)
 
 ##  1. Einleitung
 In diesem Projekt wurde die bestehende Moodle-Installation die auf einer Ubuntu VM läuft von der Version **3.10.11** auf die aktuelle **LTS-Version 4.5.2** erfolgreich upgegradet und in Docker Container migriert. Ausserdem wurde die alte Moodle Plattform (Version **3.10.11**) in eine Docker Umgebung verschoben und so konfiguriert das sie über den Port **8080** läuft, diese Umgebung wurde auch per Banner klar als veraltet gekenzeichnet. 
@@ -554,5 +556,5 @@ nano Dockerfile
 
 [Meine PDF-Datei anzeigen](./Lernjournal/Lernjournal_3_Levin_Schöbi.pdf)
 
-## 7. Quellenverzeichnis
-## 8. Netzwerkplan
+## 9. Quellenverzeichnis
+## 10. Netzwerkplan
