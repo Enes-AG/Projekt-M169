@@ -132,8 +132,24 @@ docker compose up -d --build
 ![image](https://github.com/user-attachments/assets/b0fd82db-4878-4a0f-b820-84d67886b595)
 
 
+### 4.9 Error
 
-### 4.8 Prüfen ob es geklappt hat
+Es kommt Folgende Error Meldung:
+
+![image](https://github.com/user-attachments/assets/fa14a134-1819-43bc-a425-d3ede89c9de5)
+
+Das config.php musste auf diesen Zeilen angepasst werden:
+Der Grund war das in der config.php und im yml File 2 verschiedene Sachen eingetragen waren.
+
+$CFG->dbuser    = 'moodle';
+$CFG->dbpass    = 'moodlepass';
+
+Geändert zu:
+
+![image](https://github.com/user-attachments/assets/0fc3db24-58fc-461c-8542-64de70ed0ef7)
+
+
+### 4.9 Prüfen ob es geklappt hat
 
 Moodle läuft im Container über Port 8080, alle Daten sind vorhanden und es ist klar als altes System gekenzeichnet. 
 
@@ -145,7 +161,9 @@ Moodle läuft im Container über Port 8080, alle Daten sind vorhanden und es ist
 
 ![image](https://github.com/user-attachments/assets/902174c5-24cd-46e5-8806-8462f290105d)
 
+![image](https://github.com/user-attachments/assets/275ad082-6484-4fed-b7d4-1fe93ecf0cfe)
 
+![image](https://github.com/user-attachments/assets/9b545fa4-2b08-4864-ad9c-b9388e3e44a6)
 
 
 
