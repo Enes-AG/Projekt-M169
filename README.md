@@ -432,13 +432,25 @@ mkdir -p moodle-docker-setup/{dataroot,db,master,moodle,phpmyadmin} \
 && touch moodle-docker-setup/docker-compose.yml
 ```
 
+### 6.2 docker-compose.yml erstellen
 
 
+```bash
+cd moodle-docker-setup/
+nano docker-compose.yml
+
+```
+
+![image](https://github.com/user-attachments/assets/4fed17a7-cde7-44e7-9eb6-84865c41133b)
 
 
+### 6.3 .env erstellen
 
+```bash
+nano .env
+```
 
-
+![image](https://github.com/user-attachments/assets/05d98ff3-61aa-436d-adac-729f6479b768)
 
 
 
